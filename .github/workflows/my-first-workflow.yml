@@ -1,11 +1,16 @@
 # Name of the workflow (appears in GitHub Actions UI)
 name: My First Workflow
 
-# Events that trigger this workflow
+# Triggers for the workflow
 on:
-  push:                       # Trigger workflow on push events
+  # Manual trigger using the workflow_dispatch event
+  workflow_dispatch:
+
+  # Automatic trigger on push events to the main branch
+  push:
     branches:
-      - main                  # Only trigger when pushing to the 'main' branch
+      - main
+
 
 # Define jobs for the workflow
 jobs:
