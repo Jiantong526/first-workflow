@@ -26,4 +26,5 @@ jobs:
 
       # Step 3: Run a Python command
       - name: Print a message
-        run: python -c "print('Hello, world!')"  # Executes Python directly on the runner
+        run: |
+          python -c "print('Hello, world!')"
