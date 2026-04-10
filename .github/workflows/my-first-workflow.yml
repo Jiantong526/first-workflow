@@ -15,6 +15,11 @@ on:
   schedule:
     - cron: '15 6 * * 1-5'
 
+  # Automatic trigger on pull request events targeting the main branch
+  pull_request:
+    branches:
+      - main
+
 # Define jobs for the workflow
 jobs:
   build:
@@ -30,7 +35,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4  # Official action to install Python
         with:
-          python-version: '3.11'      # Specify Python version 3.11
+          python-version: '3.x'      # Specify Python version 3.11
 
       # Step 3: Run a Python command
       - name: Print a message
